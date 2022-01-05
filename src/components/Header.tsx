@@ -36,7 +36,7 @@ function Header() {
           </li>
           <li className="mt-[15px] text-right">
             <Link to="/taiLieu" className={"hover:text-[#12B0DF] hover:underline-offset-4 hover:underline font-bold text-xl cursor-pointer "
-             +(path == "/taiLieu" ? " text-[#12B0DF] underline-offset-4 underline" : "")  }  onClick={() => setPath('/taiLieu')}>Tài Liệu </Link> 
+             +(path == "/taiLieu" ? " text-[#12B0DF] underline-offset-4 underline" : "")  }  onClick={() => setPath('/taiLieu')}>Tài Liệu</Link> 
           </li>
           
           <li className="mt-[18px] ml-[4em] ">
