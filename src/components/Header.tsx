@@ -5,9 +5,14 @@ import { Link } from 'react-router-dom';
 import IconLinkedin from "./icon/Linkedin"
 import IconGithub from "./icon/Github"
 import Logo from "./icon/Logo"
+import { useLocation } from 'react-router-dom';
 
 function Header() {
-  const [path, setPath] = useState('');
+  const location = useLocation().pathname;
+  const newPath=location.toString();
+  const [path, setPath] = useState(newPath);
+ 
+
  
   return (
     <div>
@@ -15,7 +20,10 @@ function Header() {
         <li className=" ml-[2em] py-[17px]">
              <Link to="/"  className={"m cursor-pointer hover:text-[#12B0DF] hover:underline-offset-4 hover:underline font-bold text-xl "
              +(path == "/" ? " text-[#12B0DF] underline-offset-4 underline" : "")  } 
-             onClick={() => setPath('/')} ><Logo/></Link> 
+             onClick={() => 
+             {setPath('/')
+            console.log(location)
+             }} ><Logo/></Link> 
              
           </li>
 
