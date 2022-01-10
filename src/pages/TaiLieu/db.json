@@ -1,0 +1,70 @@
+{
+    "document":[
+        {
+           "id":1,
+           "subject":"Object Oriented Programming",
+           "LinkDrive":"#",
+           "teacher":": Kadin Carder",
+           "DOC":": 4/1/2022"
+        },
+        {
+            "id":2,
+            "subject":"Data Structure and Algorithms",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        },
+        {
+            "id":3,
+            "subject":"Computer System",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        },
+        {
+            "id":4,
+            "subject":"Operating Systems",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        }
+        ,
+        {
+            "id":5,
+            "subject":"Compiler Design",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        },
+        {
+            "id":6,
+            "subject":"Design and Analysis of Algorithms",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        },
+        {
+            "id":7,
+            "subject":"Operating Systems",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        }
+        ,
+        {
+            "id":8,
+            "subject":"Operating Systems",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        }
+        ,
+        {
+            "id":9,
+            "subject":"Machine Learning",
+            "LinkDrive":"#",
+            "teacher":": Kadin Carder",
+            "DOC":": 4/1/2022"
+        }
+    ]
+}

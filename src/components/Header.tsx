@@ -14,8 +14,9 @@ function Header() {
 
   return (
     <div>
-      <ul className="flex">
-        <li className=" ml-[5em] py-[17px]">
+      <ul className=" mx-auto  w-full pl-20 ">
+        <div className="flex">
+        <li className="  py-[17px]">
           <Link
             to="/"
             className={
@@ -33,7 +34,7 @@ function Header() {
           </Link>
         </li>
 
-        <li className="mt-[1.9em] ml-[25rem]">
+        <li className="mt-[1.9em] ml-[18rem]">
           <Link
             to="/"
             className={
@@ -110,13 +111,14 @@ function Header() {
             <IconLinkedin />
           </a>
           <a
-            className="cursor-pointer mt-[2.1em]  ml-[2em]"
+            className="cursor-pointer mt-[2.1em]  ml-[2em] "
             href="https://github.com/FunDev-Team"
             target="_blank" rel="noreferrer"
           >
             <IconGithub />
           </a>
         </li>
+        </div>
       </ul>
     </div>
   );

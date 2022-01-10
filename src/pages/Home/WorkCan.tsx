@@ -21,7 +21,7 @@ function WorkCan() {
         hơn, đây là sản phẩm đầu tiên của chúng tôi
       </h3>
 
-      <div className="mx-28 grid grid-cols-4 gap-32  mt-14">
+      <div className="mx-24 grid grid-cols-4 gap-24  mt-14">
 
 {/* VIỆC CÓ THỂ LÀM ĐƯỢC 1  */}
 
