@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom"
 import WorkCanDone from "./WorkCan"
 import HowLearn from "./HowLearn";
+import Blog from "./Blog";
 
 function Home() {
   return (
@@ -28,6 +29,9 @@ function Home() {
       
       <div className="mt-56">
         <HowLearn/>
+      </div>
+      <div className="mt-56 mx-12">
+        <Blog/>
       </div>
     </>
   );
