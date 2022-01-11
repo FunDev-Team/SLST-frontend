@@ -3,6 +3,7 @@ import JSON from "./db.json";
 import IconSearch from "./Icon/IconSearch";
 import IconTeacher from "./Icon/IconTeacher";
 import IconDOC from "./Icon/IconDOC";
+import Footer from "../../components/Footer";
 
 interface fill {
   API: string;
@@ -98,6 +99,8 @@ function TaiLieu() {
             })}
         </div>
       </div>
+
+      <Footer/>
     </>
   );
 }

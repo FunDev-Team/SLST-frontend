@@ -8,8 +8,13 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'how-learn': "url('/public/BgHowLearn.png')",
+       }),
+
+       animate: Animation => ({
+        'fadeIn' : "1s linear infinite"
        })
     },
   },
+  
   plugins: [],
 }

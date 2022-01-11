@@ -1,8 +1,17 @@
-import React from 'react';
+import Footer from '../../components/Footer';
+import Introduce from './Introduce';
+import  Information from './Information'
+import Members from './Members';
 
 function About() {
+
   return (
-  <div className="text-center text-4xl">About</div>
+    <div className='font-inter'>
+      <Introduce />
+      <Information />
+      <Members />
+      <Footer />
+    </div>
   );
 }
 
