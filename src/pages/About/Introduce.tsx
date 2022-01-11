@@ -6,7 +6,7 @@ function Introduce() {
     <div className="relative">
       <div className="grid  grid-cols-2  bg-[#f3fbfd] w-full">
         <div className="pt-32 pl-[5em] pr-4 col-span-1">
-          <h1 className="text-6xl font-bold text-sky-500">About - SLST</h1>
+          <h1 className="text-6xl font-bold text-[#12B0DF]">About - SLST</h1>
           <h3 className="text-3xl font-bold my-3">
             Mục tiêu của chúng tôi là tạo ra giá trị cho cộng đồng
           </h3>
