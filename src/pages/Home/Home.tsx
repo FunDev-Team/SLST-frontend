@@ -27,7 +27,11 @@ function Home() {
             <ButtonLeaf title='Get started' />
           </Link>
         </div>
-        <img alt="Thumbnail" src="./thumbnailHome.png" className="pt-6  col-span-3" />
+        <img
+          alt="Thumbnail"
+          src="./thumbnailAdmin.png"
+          className="pt-6 pl-10  col-span-3 max-h-[31.8rem]"
+        />
       </div>
 
       <img alt="Layout" src="./Layout.png" className="" />
