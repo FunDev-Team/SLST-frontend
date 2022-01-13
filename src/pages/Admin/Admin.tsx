@@ -5,13 +5,15 @@ import ButtonLeaf from "../../components/ButtonLeaf";
 import Footer from "../../components/Footer";
 import IconAdmin from "./IconAdmin";
 import AccountAdmin from "./db.json"
+import Header from "../../components/Header";
 
 function Admin() {
   const [accountTerm, setAccountTerm] = useState("");
   const input = document.getElementById("idAdmin");
-  
+
   return (
     <>
+      <Header />
       {/* // intro admin page */}
 
       <div className="grid  grid-cols-5  bg-[#f3fbfd] w-full pl-20  ">
@@ -53,11 +55,11 @@ function Admin() {
       <div className="relative flex justify-center items-center mt-14">
         <div className="flex border-[#12B0DF] border-[3px]  rounded-xl ">
           <input
-          id="idAdmin"
+            id="idAdmin"
             type="text"
             placeholder=""
             className="border-none  rounded-md  w-[25rem] h-10 outline-none ml-2"
-            onChange={(e)=>{
+            onChange={(e) => {
               setAccountTerm(e.target.value);
             }}
           />
@@ -69,9 +71,9 @@ function Admin() {
       </div>
       <div className="flex justify-center items-center  ">
         <h1 className="mt-6 font-inter font-bold  cursor-pointer bg-[#12B0DF] text-center py-1 w-[28rem]  rounded-md text-white "
-        onClick={()=>{
+          onClick={() => {
 
-        }}>Truy cập admin</h1>
+          }}>Truy cập admin</h1>
       </div>
 
       <Footer />

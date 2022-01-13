@@ -1,0 +1,33 @@
+
+.active {
+    animation: modalFaceIn ease 0.5s;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(214, 229, 230);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(59, 178, 194);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #398dee;
+}
+
+
+@keyframes modalFaceIn {
+    from {
+      transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(0);
+    }
+  }

@@ -71,7 +71,7 @@ function Footer() {
             </div>
 
             {/* Contact */}
-            <div className='flex justify-center w-full'>
+            <div className='flex justify-center w-full z-20'>
                 <div className='flex absolute top-[-160px] p-14 bg-white 
                     shadow-md shadow-slate-600 rounded-md'>
                     <div className='max-w-md'>

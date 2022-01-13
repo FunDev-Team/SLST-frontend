@@ -48,7 +48,8 @@ function Infomation() {
           className="grid grid-cols-3 my-14 px-60
                     text-xl font-bold cursor-default"
         >
-          <div className="col-span-1 mx-auto text-center">
+          <div className="col-span-1 mx-auto text-center
+          transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-110 duration-300">
             <div className="inline-block">
               <LogoUser />
             </div>
@@ -56,15 +57,17 @@ function Infomation() {
             <h3 className="text-[#12B0DF]">Users</h3>
           </div>
 
-          <div className="col-span-1 mx-auto text-center">
+          <div className="col-span-1 mx-auto text-center 
+          transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-110 duration-300">
             <div className="inline-block">
               <LogoDocument />
             </div>
-            <h3 className="my-7">+10</h3>
+            <h3 className="my-8">+10</h3>
             <h3 className="text-[#12B0DF]">Tài Liệu</h3>
           </div>
 
-          <div className="col-span-1 mx-auto text-center">
+          <div className="col-span-1 mx-auto text-center 
+          transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-110 duration-300">
             <div className="inline-block">
               <LogoMember />
             </div>

@@ -1,7 +1,6 @@
 
 
 function ButtonLeaf(props: { title: any; }) {
-    console.log(props.title);
     
     return (
         <div className='px-16 shadow min-h-min leading-[50px] text-lg

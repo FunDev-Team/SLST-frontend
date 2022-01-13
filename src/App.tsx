@@ -12,7 +12,6 @@ import Admin from "./pages/Admin/Admin";
 function App() {
   return (
     <div>
-      <Header />
       <Routes>
         <Route path="" element={<HomePage />} />
         <Route path="/" element={<HomePage />} />

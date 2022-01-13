@@ -14,7 +14,7 @@ function Header() {
 
   return (
     <div>
-      <ul className=" mx-auto  w-full pl-20 ">
+      <ul className=" mx-auto  w-full pl-20">
         <div className="flex">
         <li className="  py-[17px]">
           <Link

@@ -5,10 +5,13 @@ import HowLearn from "./HowLearn";
 import Blog from "./Blog";
 import ButtonLeaf from "../../components/ButtonLeaf";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 function Home() {
   return (
     <>
+      <Header />
+
       <div className="grid  grid-cols-5  bg-[#f3fbfd] w-full pl-20  ">
         <div className="pt-32  col-span-2">
           <p className=" font-inter font-bold text-6xl text-[#12B0DF]">SLST</p>
@@ -38,7 +41,7 @@ function Home() {
         <Blog />
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }

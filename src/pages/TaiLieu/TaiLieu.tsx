@@ -4,6 +4,7 @@ import IconSearch from "./Icon/IconSearch";
 import IconTeacher from "./Icon/IconTeacher";
 import IconDOC from "./Icon/IconDOC";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 
 interface fill {
   API: string;
@@ -15,6 +16,8 @@ function TaiLieu() {
   const [underlineGet, setUnderlineGet] = useState(0);
   return (
     <>
+      <Header />
+
       <div className="text-center py-28 bg-[#E5FAFF]">
         <h1 className="font-inter font-bold text-6xl text-[#00C5FF]">
           Tài Liệu Học Tập
@@ -63,7 +66,6 @@ function TaiLieu() {
                     }}
                     onMouseOut={() => {
                       setUnderlineGet(0);
-                      console.log(underlineGet);
                     }}
                   >
                     <a
@@ -100,7 +102,7 @@ function TaiLieu() {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </>
   );
 }
