@@ -6,7 +6,7 @@ import ButtonLeaf from './ButtonLeaf';
 function Footer() {
 
     return (
-        <div className='relative w-full bottom-0 mt-96'>
+        <div className='relative w-full bottom-0 mt-96 z-0'>
             <div className='flex justify-around bg-cyan-50 h-80 w-full pt-24'>
 
                 <div className='text-slate-600'>

@@ -32,8 +32,7 @@ function TaiLieu() {
             <IconSearch />
           </div>
           <input
-            type="text"
-            placeholder="Nhập môn học cần tìm kiếm"
+            type="text" placeholder="Nhập môn học cần tìm kiếm"
             className="border-none  rounded-md  w-[25rem] h-10 outline-none ml-2"
             onChange={(e) => {
               setSearchTearm(e.target.value);
@@ -49,12 +48,11 @@ function TaiLieu() {
               else if (
                 val.subject
                   .toLowerCase()
-                  .includes(searchTearm.toLowerCase())
-              ) {
+                  .includes(searchTearm.toLowerCase())) 
+              {
                 // nếu subject có từ khóa vừa nhập thì sẽ được return và render ra
                 return val;
-              }
-            })
+              }})
             .map((val, key) => {
               return (
                 // render môn học

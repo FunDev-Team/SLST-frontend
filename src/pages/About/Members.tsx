@@ -51,15 +51,17 @@ function Members() {
             <a
               href="https://www.facebook.com/hongtan1422002/"
               className="mx-auto hover:animate-bounce"
+              target="_blank"
             >
               <Facebook />
             </a>
-            <a href="#" className="mx-auto hover:animate-bounce">
+            <a href="https://www.linkedin.com/in/hong-tan-nguyen-32253020b/" className="mx-auto hover:animate-bounce" target="_blank">
               <Linkedin />
             </a>
             <a
               href="https://github.com/Hong-Tan"
               className="mx-auto hover:animate-bounce"
+              target="_blank"
             >
               <Github />
             </a>
@@ -108,18 +110,21 @@ function Members() {
             <a
               href="https://www.facebook.com/huynh.h.loc.92/"
               className="mx-auto hover:animate-bounce"
+              target="_blank"
             >
               <Facebook />
             </a>
             <a
               href="https://www.linkedin.com/in/hu%E1%BB%B3nh-h%E1%BB%AFu-l%E1%BB%99c-130030221/"
               className="mx-auto hover:animate-bounce"
+              target="_blank"
             >
               <Linkedin />
             </a>
             <a
               href="https://github.com/huynhhuuloc129"
               className="mx-auto hover:animate-bounce"
+              target="_blank"
             >
               <Github />
             </a>
@@ -168,15 +173,17 @@ function Members() {
             <a
               href="https://www.facebook.com/profile.php?id=100014937931401"
               className="mx-auto hover:animate-bounce"
+              target="_blank"
             >
               <Facebook />
             </a>
-            <a href="#" className="mx-auto hover:animate-bounce">
+            <a href="#" className="mx-auto hover:animate-bounce" target="_blank">
               <Linkedin />
             </a>
             <a
               href="https://github.com/tranduykhuong"
               className="mx-auto hover:animate-bounce"
+              target="_blank"
             >
               <Github />
             </a>
