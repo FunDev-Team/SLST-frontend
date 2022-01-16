@@ -29,11 +29,7 @@ function Members() {
                 setImgHover(0);
               }}
             />
-            <div
-              className={
-                "" + (imgHover !== 1 ? "hidden" : "transition-transform") + ""
-              }
-            >
+            <div className={(imgHover !== 1 ? "hidden" : "transition-transform")} >
               <div
                 className="absolute w-full h-10 rounded-3xl
                             bg-sky-400 opacity-70 bottom-[4px]"
@@ -55,7 +51,10 @@ function Members() {
             >
               <Facebook />
             </a>
-            <a href="https://www.linkedin.com/in/hong-tan-nguyen-32253020b/" className="mx-auto hover:animate-bounce" target="_blank">
+            <a href="https://www.linkedin.com/in/hong-tan-nguyen-32253020b/"
+              className="mx-auto hover:animate-bounce"
+              target="_blank"
+            >
               <Linkedin />
             </a>
             <a
@@ -89,10 +88,7 @@ function Members() {
               }}
             />
             <div
-              className={
-                "" + (imgHover !== 2 ? "hidden" : "transition-transform") + ""
-              }
-            >
+              className={(imgHover !== 2 ? "hidden" : "transition-transform")} >
               <div
                 className="absolute w-full h-10 rounded-3xl
                             bg-sky-400 opacity-70 bottom-[4px]"
@@ -152,10 +148,7 @@ function Members() {
               }}
             />
             <div
-              className={
-                "" + (imgHover !== 3 ? "hidden" : "transition-transform") + ""
-              }
-            >
+              className={(imgHover !== 3 ? "hidden" : "transition-transform")} >
               <div
                 className="absolute w-full h-10 rounded-3xl
                             bg-sky-400 opacity-70 bottom-[4px]"
@@ -177,7 +170,10 @@ function Members() {
             >
               <Facebook />
             </a>
-            <a href="#" className="mx-auto hover:animate-bounce" target="_blank">
+            <a href="#"
+              className="mx-auto hover:animate-bounce"
+              target="_blank"
+            >
               <Linkedin />
             </a>
             <a

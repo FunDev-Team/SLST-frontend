@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ButtonLeaf from "../../components/ButtonLeaf";
+import { Button } from "../../components/Button";
 
 function Introduce() {
   return (
@@ -16,7 +16,7 @@ function Introduce() {
             condimentum leo rhoncus id.
           </p>
           <Link to="/thiThu" className="flex m-auto mt-11">
-            <ButtonLeaf title="Get started" />
+            <Button content="Get started" />
           </Link>
         </div>
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import IconSearch from '../TaiLieu/Icon/IconSearch';
@@ -7,32 +7,24 @@ import IconDOP from './icon/IconDOP';
 import IconExams from './icon/IconExams';
 import IconFields from './icon/IconFields';
 import IconPoster from './icon/IconPoster';
-import { ReactDimmer } from './ReactDimmer';
-import { TestModal } from './TestModal';
+import { BackgroundModal } from './Modal/BackgroundModal';
+import { TestModal } from './Modal/TestModal';
 
 function Exam() {
   // state khi nhập giá trị search
   const [searchTest, setSearchTest] = useState("");
 
   // state khi over mouse môn học
-  const [underlineGet, setUnderlineGet] = useState(0);
-
-  // state index test exam
-  const [idxExam, setIdxExam] = useState(-1)
+  const [idxExam, setIdxExam] = useState(0);
 
   // Modal test
   const [isModalOpen, setModal] = useState(false)
 
-  const handleClick = (idx: any) => {
-    setIdxExam(idx)
-    setModal(prevState => !prevState)
-  }
-
   return (
     <div className='relative'>
 
-      {isModalOpen && <TestModal closeModal={setModal} idx={idxExam} />}
-      <ReactDimmer isOpen={isModalOpen} exitDimmer={setModal} zIndex={10} blur={1} />
+      {isModalOpen && <TestModal closeModal={setModal} idxExam={idxExam} />}
+      <BackgroundModal isOpen={isModalOpen} exitDimmer={setModal} zIndex={10} blur={1} />
 
       {/* Header */}
       <Header />
@@ -65,7 +57,7 @@ function Exam() {
           />
         </div>
 
-        {/* Test Items */}
+        {/* Exam Items */}
         <div className="grid grid-cols-3 mt-16 gap-x-20 gap-y-10">
           {JSON.test
             .filter((item) => {
@@ -85,44 +77,43 @@ function Exam() {
                       hover:border-[#5fc9e9] hover:bg-cyan-100 font-inter
                       transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-200"
                     onMouseOver={() => {
-                      setUnderlineGet(parseInt(item.id));
-                    }}
-                    onMouseOut={() => {
-                      setUnderlineGet(0);
+                      setIdxExam(key);
                     }}
                   >
-                    <div>
-                      <div className="text-center mt-5 font-inter font-bold">
+                    <div className='font-inter'>
+                      <div className="text-center mt-5 font-bold">
                         {item.subject}
                       </div>
                       <div className="flex mt-8 ml-4">
                         <IconFields />
-                        <h1 className="ml-3 font-inter">{item.fields}</h1>
+                        <h1 className="ml-3">{item.fields}</h1>
                       </div>
                       <div className="flex mt-4  ml-4">
                         <IconPoster />
-                        <h1 className="ml-3 font-inter">{item.poster}</h1>
+                        <h1 className="ml-3">{item.poster}</h1>
                       </div>
                       <div className='flex'>
                         <div className="flex mt-4  ml-4">
                           <IconExams />
-                          <h1 className="ml-3 font-inter">{item.totalExams}</h1>
+                          <h1 className="ml-3">{item.totalExams}</h1>
                         </div>
                         <div className="flex mt-4  ml-16">
                           <IconDOP />
-                          <h1 className="ml-3 font-inter">{item.DOP}</h1>
+                          <h1 className="ml-3">{item.DOP}</h1>
                         </div>
                       </div>
+
                       <button
                         className={
                           "ml-3 mt-5 font-inter bg-[#12B0DF] w-24 h-9 rounded-lg text-white text-sm" +
-                          (underlineGet === parseInt(item.id)
+                          (idxExam === key
                             ? "hover:text-sky-600 hover:border-2 hover:border-cyan-800" : "")
                         }
-                        onClick={() => handleClick(key)}
+                        onClick={() => setModal(prevState => !prevState)}
                       >
                         Bắt đầu
                       </button>
+                      
                     </div>
                   </div>
                 </div>

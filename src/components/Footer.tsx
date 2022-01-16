@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import Logo from './icon/Logo'
 import { MdCopyright } from 'react-icons/md';
-import ButtonLeaf from './ButtonLeaf';
+import { Button } from './Button';
 
 function Footer() {
 
     return (
-        <div className='relative w-full bottom-0 mt-96 z-0'>
+        <div className='relative w-full bottom-0 mt-96'>
             <div className='flex justify-around bg-cyan-50 h-80 w-full pt-24'>
 
                 <div className='text-slate-600'>
@@ -84,7 +84,7 @@ function Footer() {
                     </div>
 
                     <a href='' className='flex-1 ml-40 my-auto'>
-                        <ButtonLeaf title="Liên hệ admin"/>
+                        <Button content="Liên hệ admin" />
                     </a>
                 </div>
             </div>

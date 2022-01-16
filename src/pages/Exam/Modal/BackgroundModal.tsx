@@ -1,5 +1,5 @@
 
-export interface IDimmerProps {
+export interface IProps {
     isOpen: boolean;
     exitDimmer: (action: boolean) => void;
     zIndex?: number;
@@ -9,8 +9,8 @@ export interface IDimmerProps {
     transition?: number;
 }
 
-export const ReactDimmer = ({ isOpen, exitDimmer, zIndex = 100, opacity = 0.5, blur = 0,
-    saturate = 100, transition = 0.3 }: IDimmerProps) => {
+export const BackgroundModal = ({ isOpen, exitDimmer, zIndex = 100, opacity = 0.5, blur = 0,
+    saturate = 100, transition = 0.3 }: IProps) => {
         
     const defaultStyle = {
         zIndex: zIndex.toString(), background: 'rgba(0, 0, 0, 0)',

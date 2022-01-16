@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import WorkCanDone from "./WorkCan"
 import HowLearn from "./HowLearn";
 import Blog from "./Blog";
-import ButtonLeaf from "../../components/ButtonLeaf";
+import { Button } from "../../components/Button";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
@@ -24,7 +24,7 @@ function Home() {
             condimentum leo rhoncus id.{" "}
           </p>
           <Link to='/thiThu' className='flex m-auto mt-11'>
-            <ButtonLeaf title='Get started' />
+            <Button content='Get started' />
           </Link>
         </div>
         <img
