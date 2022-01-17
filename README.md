@@ -1,1 +1,1 @@
-# SLST-frontend
+# SLST - frontend
