@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import JSON from "./db.json";
 import IconSearch from "./Icon/IconSearch";
 import IconTeacher from "./Icon/IconTeacher";
 import IconDOC from "./Icon/IconDOC";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import docs from "../../api/docs"
+import axios from "axios";
 
 interface fill {
   API: string;
@@ -14,6 +16,23 @@ function TaiLieu() {
   const [searchTearm, setSearchTearm] = useState("");
   // state khi over mouse môn học
   const [underlineGet, setUnderlineGet] = useState(0);
+
+  useEffect(()=>{
+    async function fetchPostList(){
+      try{
+        const resquestUrl="https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI";
+        const response = await fetch(resquestUrl);
+        const responeJson= await response.json();
+        console.log({responeJson})
+      }catch(error : any)
+      {
+        console.log('error is ',error.message)
+      }
+    }
+    fetchPostList();
+  },[]);
+ 
+
   return (
     <>
       <Header />
