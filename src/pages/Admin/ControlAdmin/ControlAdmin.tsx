@@ -66,7 +66,7 @@ function ControlAdmin(props : user) {
                <div className={""+activeAdmin==="Tai Lieu"?"":"hidden"}>
                     {docx.document.map((val,key)=>{
                         return( 
-                            <div className="flex ">
+                            <div className="flex " key={val.id}>
                                 <div className="mt-2 mr-3 cursor-pointer" onClick={()=>setModalDelOpen(true)}>
                                     <IconTrash />
                                 </div>
@@ -77,7 +77,7 @@ function ControlAdmin(props : user) {
                <div className={""+activeAdmin==="Bai Thi"?"":"hidden"}>
                     {test.test.map((val,key)=>{
                         return( 
-                            <div className="flex">
+                            <div className="flex" key={val.id}>
                                 <div className="mt-2 mr-3 cursor-pointer" onClick={()=>setModalDelOpen(true)}>
                                     <IconTrash/>
                                 </div>
@@ -88,7 +88,7 @@ function ControlAdmin(props : user) {
                <div className={""+activeAdmin==="Tai Khoan"?"":"hidden"}>
                     {admin.account.map((val,key)=>{
                         return( 
-                            <div className="flex">
+                            <div className="flex" key={val.id}>
                                 <div className="mt-2 mr-3 cursor-pointer">
                                     <IconAdminOther/>
                                 </div>

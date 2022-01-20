@@ -20,7 +20,7 @@ function TaiLieu() {
   useEffect(()=>{
     async function fetchPostList(){
       try{
-        const resquestUrl="https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/search/TrendingNewsAPI";
+        const resquestUrl="https://slst-backend.herokuapp.com/api/docs";
         const response = await fetch(resquestUrl);
         const responeJson= await response.json();
         console.log({responeJson})
