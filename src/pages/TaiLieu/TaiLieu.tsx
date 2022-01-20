@@ -5,7 +5,6 @@ import IconTeacher from "./Icon/IconTeacher";
 import IconDOC from "./Icon/IconDOC";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import docs from "../../api/docs"
 import axios from "axios";
 
 interface fill {
@@ -17,22 +16,36 @@ function TaiLieu() {
   // state khi over mouse môn học
   const [underlineGet, setUnderlineGet] = useState(0);
 
-  useEffect(()=>{
-    async function fetchPostList(){
-      try{
-        const resquestUrl="https://slst-backend.herokuapp.com/api/docs";
-        const response = await fetch(resquestUrl);
-        const responeJson= await response.json();
-        console.log({responeJson})
-      }catch(error : any)
-      {
-        console.log('error is ',error.message)
-      }
-    }
-    fetchPostList();
-  },[]);
+  // useEffect(()=>{
+  //   async function fetchPostList(){
+  //     try{
+  //       const resquestUrl="https://slst-backend.herokuapp.com/api/docs";
+  //       const response = await fetch(resquestUrl);
+  //       const responeJson= await response.json();
+  //       console.log({responeJson})
+  //     }catch(error : any)
+  //     {
+  //       console.log('error is ',error.message)
+  //     }
+  //   }
+  //   fetchPostList();
+  // },[]);
  
+  // const [documents,setDocuments]=useState([]);
+  // useEffect(()=>{
+  //   const fetchDocumentList=async()=>{
+  //     try{
+  //       const res= await docsApi.getAll()
+  //       console.log(res);
+  //     }catch(err)
+  //     {
+  //       console.log('Fail fetch data ', err)
+  //     }
+  //   }
+  //   fetchDocumentList()
 
+  // },[])
+ 
   return (
     <>
       <Header />
