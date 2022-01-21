@@ -1,19 +1,35 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import examsApi from '../../../../api/examsApi';
 
+function ModalCreateTest({ setModalCreateTest,adminCreate }: any) {
 
-function ModalCreateTest({ setModalCreateTest }: any) {
-
+    const [numberOrder,setNumberOrder]=useState(2);
     const [inputFields, setInputFields] = useState
         ([{
-            id: uuidv4(),
-            question: '',
-            choice_1: '',
-            choice_2: '',
-            choice_3: '',
-            choice_4: '',
-            answer: ''
-        },])
+            id:numberOrder-1,
+            question: "",
+            choice1: "",
+            choice2: "",
+            choice3: "",
+            choice4: "",
+            answer: "",
+        },]);
+    const [nameSubject,setNameSubject]=useState('');
+    const [nameField,setNameField]=useState('');
+    const handleCreateExam=()=>{
+        const ExamCreated = {
+            id :uuidv4(),
+            subject: nameSubject,
+            fields: nameField,
+            poster: adminCreate,
+            DOP: "21/01/2022",
+            totalExams: inputFields.length,
+            questions:inputFields,
+        }
+        examsApi.post(ExamCreated);
+        setModalCreateTest(false);
+    }
 
     return (
         <div className=" flex justify-center items-center  inset-0  bg-indigo-600 bg-opacity-25 fixed z-10">
@@ -30,11 +46,11 @@ function ModalCreateTest({ setModalCreateTest }: any) {
                     <ul className="text-center ">
                         <li className="flex mx-5 my-6  ">
                             <h1 className="ml-5">Tên môn học </h1>
-                            <input type="text" className='border-[#00C5FF] border-2 rounded-md outline-none ml-4 w-72 h-8' />
+                            <input type="text" className='border-[#00C5FF] border-2 rounded-md outline-none ml-4 w-72 h-8' value={nameSubject} onChange={(e)=>{setNameSubject(e.target.value)}} />
                         </li>
                         <li className="flex mx-5 my-6">
                             <h1 className="ml-5">Lĩnh vực</h1>
-                            <input type="text" className='border-[#00C5FF] border-2 rounded-md outline-none ml-12 w-72 h-8' />
+                            <input type="text" className='border-[#00C5FF] border-2 rounded-md outline-none ml-12 w-72 h-8' value={nameField} onChange={(e)=>{setNameField(e.target.value)}} />
                         </li>
                         <li className="">
                             {
@@ -45,6 +61,7 @@ function ModalCreateTest({ setModalCreateTest }: any) {
                                             <input type="text" className="border-[#00C5FF] border-2 rounded-md outline-none w-80" value={inputField.question}
                                                 onChange={(e) => {
                                                     const newInputFields = inputFields.map(i => {
+                                                        
                                                         if (inputField.id === i.id) {
                                                             i.question = e.target.value
                                                         }
@@ -57,22 +74,22 @@ function ModalCreateTest({ setModalCreateTest }: any) {
 
                                         <div className="flex mx-24 mb-2">
                                             <h1 className="">A</h1>
-                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice_1}
+                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice1}
                                                 onChange={(e) => {
                                                     const newInputFields = inputFields.map(i => {
                                                         if (inputField.id === i.id) {
-                                                            i.choice_1 = e.target.value
+                                                            i.choice1 = e.target.value
                                                         }
                                                         return i;
                                                     })
                                                     setInputFields(newInputFields);
                                                 }} />
                                             <h1 className="">B</h1>
-                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice_2}
+                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice2}
                                                 onChange={(e) => {
                                                     const newInputFields = inputFields.map(i => {
                                                         if (inputField.id === i.id) {
-                                                            i.choice_2 = e.target.value
+                                                            i.choice2 = e.target.value
                                                         }
                                                         return i;
                                                     })
@@ -81,21 +98,21 @@ function ModalCreateTest({ setModalCreateTest }: any) {
                                         </div>
                                         <div className="flex mx-24 mb-2">
                                             <h1 className="">C</h1>
-                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice_3} onChange={(e) => {
+                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice3} onChange={(e) => {
                                                 const newInputFields = inputFields.map(i => {
                                                     if (inputField.id === i.id) {
-                                                        i.choice_3 = e.target.value
+                                                        i.choice3 = e.target.value
                                                     }
                                                     return i;
                                                 })
                                                 setInputFields(newInputFields);
                                             }} />
                                             <h1 className="">D</h1>
-                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice_4}
+                                            <input type="text" className="mx-10 border-[#818c9b] border-2 rounded-md outline-none " value={inputField.choice4}
                                                 onChange={(e) => {
                                                     const newInputFields = inputFields.map(i => {
                                                         if (inputField.id === i.id) {
-                                                            i.choice_4 = e.target.value
+                                                            i.choice4 = e.target.value
                                                         }
                                                         return i;
                                                     })
@@ -121,21 +138,24 @@ function ModalCreateTest({ setModalCreateTest }: any) {
                             }
                         </li>
                         <button className=" bg-blue-400  px-4 py-[0.2rem] text-white rounded-md font-semibold text-base" onClick={() => {
+                            setNumberOrder(preState=>(preState+=1))
+                            console.log("number : ",numberOrder);
+                            console.log("result : ",inputFields);
                             setInputFields([...inputFields, {
-                                id: uuidv4(),
-                                question: '',
-                                choice_1: '',
-                                choice_2: '',
-                                choice_3: '',
-                                choice_4: '',
-                                answer: ''
+                                id: numberOrder,
+                                question: "",
+                                choice1: "",
+                                choice2: "",
+                                choice3: "",
+                                choice4: "",
+                                answer: "",
                             }])
                         }}>Thêm câu hỏi</button>
                     </ul>
                 </div>
 
                 <div className="flex justify-center items-center mt-14 mb-8">
-                    <button className="mr-2 bg-[#1bff07]  px-6 py-2 text-white rounded-md" >Tạo</button>
+                    <button className="mr-2 bg-[#1bff07]  px-6 py-2 text-white rounded-md" onClick={ handleCreateExam} >Tạo</button>
                     <button className="ml-2 bg-[#ff2507]  px-6 py-2 text-white rounded-md"
                         onClick={() => setModalCreateTest(false)}>
                         Hủy

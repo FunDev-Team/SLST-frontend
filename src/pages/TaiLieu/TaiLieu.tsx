@@ -6,6 +6,7 @@ import IconDOC from "./Icon/IconDOC";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import axios from "axios";
+import docsApi from '../../api/docsApi'
 
 interface fill {
   API: string;
@@ -16,40 +17,37 @@ function TaiLieu() {
   // state khi over mouse môn học
   const [underlineGet, setUnderlineGet] = useState(0);
 
-  // useEffect(()=>{
-  //   async function fetchPostList(){
-  //     try{
-  //       const resquestUrl="https://slst-backend.herokuapp.com/api/docs";
-  //       const response = await fetch(resquestUrl);
-  //       const responeJson= await response.json();
-  //       console.log({responeJson})
-  //     }catch(error : any)
-  //     {
-  //       console.log('error is ',error.message)
-  //     }
-  //   }
-  //   fetchPostList();
-  // },[]);
- 
-  // const [documents,setDocuments]=useState([]);
-  // useEffect(()=>{
-  //   const fetchDocumentList=async()=>{
-  //     try{
-  //       const res= await docsApi.getAll()
-  //       console.log(res);
-  //     }catch(err)
-  //     {
-  //       console.log('Fail fetch data ', err)
-  //     }
-  //   }
-  //   fetchDocumentList()
-
-  // },[])
+  
+ const [productList,setProductList]=useState([]);
+ useEffect(()=>{
+   const fetchDocs=async()=>{
+     try{
+      const response=await docsApi.getAll();
+      
+      
+      // console.log(" deo phai state ",response.data.docs[0].name);
+      setProductList(response.data.docs);
+      
+        // console.log(typeof response.data.docs);
+      
+     }catch(err)
+     {
+       console.log(err);
+     }
+   }
+   fetchDocs();
+ },[])
  
   return (
     <>
       <Header />
-
+      {/* {productList
+      .map((val,key)=>{
+        console.log("data after map",val['id'])
+                        return( 
+                        <h1 key={key}>{val['name']} {val['id']}  {val['url']}</h1>
+                        )})
+                        } */}
       <div className="text-center py-28 bg-[#E5FAFF]">
         <h1 className="font-inter font-bold text-6xl text-[#00C5FF]">
           Tài Liệu Học Tập
@@ -73,14 +71,15 @@ function TaiLieu() {
           />
         </div>
         <div className="grid grid-cols-3 mt-16 gap-x-20 gap-y-10">
-          {JSON.document
+          {productList
             .filter((val) => {
               // nếu searchTearm " " thì tiến thanh return tất cả value
               if (searchTearm == "") return val;
               else if (
-                val.subject
+                String(val['subject'])
                   .toLowerCase()
-                  .includes(searchTearm.toLowerCase())) 
+                  .includes(searchTearm.toLowerCase())
+                ) 
               {
                 // nếu subject có từ khóa vừa nhập thì sẽ được return và render ra
                 return val;
@@ -92,32 +91,32 @@ function TaiLieu() {
                   <div
                     className="border border-[3px] rounded-md border-[#7ce0ff] w-72 h-44 hover:border-[#5fc9e9] hover:border-4 font-inter"
                     onMouseOver={() => {
-                      setUnderlineGet(val.id);
+                      setUnderlineGet(val['_id']);
                     }}
                     onMouseOut={() => {
                       setUnderlineGet(0);
                     }}
                   >
                     <a
-                      href="https://drive.google.com/drive/folders/1kJ82ZZhrPsNpZkEOXifTAuu1XzT3vKGD"
+                      href={val['LinkDrive']}
                       target="_blank"
                       className="" rel="noreferrer"
                     >
                       <div className="text-center mt-5 font-inter font-bold">
-                        {val.subject}
+                        {val['subject']}
                       </div>
                       <div className="flex mt-8 ml-4">
-                        <IconTeacher />
-                        <h1 className="ml-3 font-inter">{val.teacher}</h1>
+                       <IconDOC />
+                        <h1 className="ml-3 font-inter">{val['teacher']}</h1>
                       </div>
                       <div className="flex mt-4  ml-4">
-                        <IconDOC />
-                        <h1 className="ml-3 font-inter">{val.DOC}</h1>
+                      <IconTeacher />
+                        <h1 className="ml-3 font-inter">{val['DOC']}</h1>
                       </div>
                       <h1
                         className={
                           "text-right font-inter  " +
-                          (underlineGet === val.id
+                          (underlineGet === val['_id']
                             ? "text-[#12B0DF] underline"
                             : "")
                         }

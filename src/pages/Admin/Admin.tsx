@@ -1,37 +1,46 @@
 /* eslint-disable react/jsx-no-duplicate-props */
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import IconAdmin from "./Icon/IconAdmin";
-import ApiAccountAdmin from "./db.json";
 import { FaHeart } from "react-icons/fa";
 import Header from "../../components/Header";
 import ControlAdmin from "./ControlAdmin/ControlAdmin";
+import accountApi from '../../api/accountsApi'
+
 
 function Admin() {
   const [accountTerm, setAccountTerm] = useState(""); // state account đang nhâp
   const [failAccount, setFailAccount] = useState(0); // 0 : là chưa nhập hoặc chưa click đăng nhập, 1 là sai mật khẩu
   const [accessAdmin, setAccessAdmin] = useState("");
   // handle xac nhận tài khoản khi log in -> return 1 nếu login fail, else login thành công
+  const [accountList,setAccountList] = useState([]);
+
+  useEffect(()=>{
+    const fetchAccounts=async()=>{
+      try{
+       const response=await accountApi.getAll();
+       setAccountList(response.data.accounts);
+      }catch(err)
+      {
+        console.log(err);
+      }
+    }
+    fetchAccounts();
+  },[])
+
   function logInFail(accountCurr: any) {
     let flag = 1;
-    ApiAccountAdmin.account.forEach((value) => {
-      if (value.AccountAdmin === accountCurr) {
+    accountList.forEach((value) => {
+      if (value['AccountAdmin'] === accountCurr) 
         flag = 0;
-      }
     });
     return flag;
   }
   // xử lí sau khi login, nếu log in fail, tiến hành set state, ngược lại thông báo log in thành công
   const handleLogIn = () => {
-    if (logInFail(accountTerm) === 1) {
-
-      setFailAccount(1);
-
-    } else {
-      setAccessAdmin("admin control");
-    }
+     (logInFail(accountTerm) === 1? setFailAccount(1):setAccessAdmin("logged")) 
   };
 
   // xử lí khi nhấn enter ở khung input tài khoản admin
@@ -98,7 +107,7 @@ function Admin() {
             </h1>
           </div>
         </div>
-        <div className={"" + accessAdmin == "admin control" ? "" : "hidden"}>
+        <div className={"" + accessAdmin == "logged" ? "" : "hidden"}>
           <div className="flex justify-center items-center">
             <button className=" my-5 p-2 font-inter bg-[#00C5FF] rounded-lg border-2 text-lg text-white    hover:border-cyan-800"
               onClick={() => {
