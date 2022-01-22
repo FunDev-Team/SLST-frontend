@@ -53,7 +53,7 @@ Before you start, ensure you meet the following requirements:
   | Admin | Providing admin rights to add or remove materials and tests |
     
   ### II. Program directory structure 
-  Present only the important files and need to know in the project:
+    Present only the important files and need to know in the project:
     1. public : Files about icons and images used in the website interface, images can be viewed on the website by the url of that image.
     2. src :
       - api : query to a set of functions in use. Contains api files to call to the server.
