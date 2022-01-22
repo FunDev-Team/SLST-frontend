@@ -15,10 +15,10 @@
 FunDev is a group of information technology students from HCMUS and CTU, the goal of developing a project to help the student community develop more. 
 
 ## Prerequisites
-`Before you start, ensure you meet the following requirements:
+Before you start, ensure you meet the following requirements:
  [x] You have intalled the Visual Studio Code or any other Javascript enabled enviroment.
  [x] You also have to install NodeJS LTS and npm
- [x] You have a basic understand of Typescript, Tailwind.`
+ [x] You have a basic understand of Typescript, Tailwind.
 
 ## Guide:
 ### Cloning the project to your local
@@ -31,9 +31,9 @@ FunDev is a group of information technology students from HCMUS and CTU, the goa
   At the terminal, paste the command:
     $ npm install
  #### Usage
-  After installing enviroment, using command to run:
-  $ npm run
-  Click url : http://localhost:3000 to run on local.
+   After installing enviroment, using command to run:
+   $ npm run
+   Click url : http://localhost:3000 to run on local.
   
 ### Deloying on netlify by drag and drop
   - Step 1 : At the terminal, create file build:
