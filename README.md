@@ -1,6 +1,6 @@
 # SLST - Nền tảng chia sẻ tài liệu và thi thử
 
-## Table of contents
+## :office: Table of contents
 * [Project infomation](#project-infomation)
 * [FunDev - Team](#funDev-Team)
 * [Prerequisites](#prerequisites)
@@ -8,7 +8,7 @@
 * [Project structure](#project-structure)
 * [Contact](#contact)
 
-## Project infomation
+## :memo: Project infomation
  * SLST : Self-Learn Self-Taught
  * SLST is a non-profit website where free materials are shared. Besides, you can also try your hand at selected and continously updated tests.
 
@@ -21,7 +21,7 @@ Before you start, ensure you meet the following requirements:
   - [x] You also have to install NodeJS LTS and npm
   - [x] You have a basic understand of Typescript, Tailwind.
 
-## Guide:
+## :page_with_curl: Guide:
 ### Cloning the project to your local
   - Open Git bash
   - Paste folllowing command:
@@ -50,7 +50,7 @@ $ npm run build
   - Step 2 : Open netlify and log in netlify in browser
   - Step 3 : Drag and drop the newly created build file into the upload section on netlify to proceed with deloy project
 
-## Project structure
+## :books: Project structure
   ### I. Functions of the website
   | Function name | Specific implemantation |
   | ------------- | :-----------------------: |
@@ -76,7 +76,7 @@ $ npm run build
       - Exam : Exam-page component manage tests
       - TaiLieu : TaiLieu-page component
           
-## Contact
+## :phone: Contact
   - HongTan: [Facebook](https://www.facebook.com/hongtan1422002/)
   - DuyKhuong: [Facebook](https://www.facebook.com/profile.php?id=100014937931401)
   - HuuLoc: [Facebook](https://www.facebook.com/huynh.h.loc.92/)
