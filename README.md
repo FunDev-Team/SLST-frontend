@@ -32,15 +32,21 @@ Before you start, ensure you meet the following requirements:
 ### Running on local using npm
  #### Install
   At the terminal, paste the command:
-$ npm install
+```
+  $ npm install
+```
  #### Usage
    - After installing enviroment, using command to run:
-    ` $ npm run `
+```
+  $ npm run 
+```
    - Click url : http://localhost:3000 to run on local.
   
 ### Deloying on netlify by drag and drop
   - Step 1 : At the terminal, create file build:
-    ``` $ npm run build ```
+``` 
+  $ npm run build 
+```
   - Step 2 : Open netlify and log in netlify in browser
   - Step 3 : Drag and drop the newly created build file into the upload section on netlify to proceed with deloy project
 
