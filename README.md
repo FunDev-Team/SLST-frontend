@@ -13,7 +13,7 @@
  * SLST is a non-profit website where free materials are shared. Besides, you can also try your hand at selected and continously updated tests.
 
 ## FunDev - Team
- * FunDev is a group of information technology students from HCMUS and CTU, the goal of developing a project to help the student community develop more. 
+  FunDev is a group of information technology students from HCMUS and CTU, the goal of developing a project to help the student community develop more. 
 
 ## Prerequisites
 Before you start, ensure you meet the following requirements:
@@ -25,7 +25,7 @@ Before you start, ensure you meet the following requirements:
 ### Cloning the project to your local
  - Open Git bash
  - Paste folllowing command:
-   ` $ git clone https://github.com/FunDev-Team/SLST-frontend.git `
+    $ git clone https://github.com/FunDev-Team/SLST-frontend.git
   
 ### Running on local using npm
  #### Install
@@ -53,7 +53,7 @@ Before you start, ensure you meet the following requirements:
     | Admin | Providing admin rights to add or remove materials and tests |
     
   ### II. Program directory structure 
-  Present only the important files and need to know in the project:
+    Present only the important files and need to know in the project:
       1. public : Files about icons and images used in the website interface, images can be viewed on the website by the url of that image.
       2. src :
         - api : query to a set of functions in use. Contains api files to call to the server.
