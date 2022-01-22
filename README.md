@@ -1,4 +1,4 @@
-# SLST - Nền tảng chia sẻ tài liệu và thi thử
+# SLST -  Share document and Contest 
 <p align="center">
   <img src="https://github.com/FunDev-Team/SLST-frontend/blob/main/public/logo.png" width="100px" title="hover text">
 </p>
