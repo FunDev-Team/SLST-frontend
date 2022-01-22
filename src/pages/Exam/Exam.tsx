@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import IconSearch from '../TaiLieu/Icon/IconSearch';
-import JSON from './db.json'
 import IconDOP from './icon/IconDOP';
 import IconExams from './icon/IconExams';
 import IconFields from './icon/IconFields';
 import IconPoster from './icon/IconPoster';
 import { BackgroundModal } from './Modal/BackgroundModal';
 import { TestModal } from './Modal/TestModal';
+import examsApi from '../../api/examsApi';
 
 function Exam() {
-  // state khi nhập giá trị search
+  // state search
   const [searchTest, setSearchTest] = useState("");
 
   // state khi over mouse môn học
@@ -20,10 +20,28 @@ function Exam() {
   // Modal test
   const [isModalOpen, setModal] = useState(false)
 
+  // Get exams from api
+  const [examList, setExamList] = useState(Object);
+
+  // Fetch API
+  useEffect(() => {
+    const fetchExamList = async () => {
+      try {
+        const api = await examsApi.getAll();
+        setExamList(api);
+      }catch (err){
+        console.log('Failed to fetch exams API: ', err);
+      }
+    }
+
+    fetchExamList();
+  }, [])
+
   return (
     <div className='relative'>
 
-      {isModalOpen && <TestModal closeModal={setModal} idxExam={idxExam} />}
+      {/* Modal Test */}
+      {isModalOpen && <TestModal closeModal={setModal} Exam={examList.data.exams[idxExam]} />}
       <BackgroundModal isOpen={isModalOpen} exitDimmer={setModal} zIndex={10} blur={1} />
 
       {/* Header */}
@@ -59,8 +77,8 @@ function Exam() {
 
         {/* Exam Items */}
         <div className="grid grid-cols-3 mt-16 gap-x-20 gap-y-10">
-          {JSON.test
-            .filter((item) => {
+          {Object.keys(examList).length !== 0 && examList.data.exams
+            .filter((item: any) => {
               // nếu searchTest "" thì tiến thanh return tất cả item
               if (searchTest == "")
                 return item;
@@ -68,7 +86,7 @@ function Exam() {
               else if (item.subject.toLowerCase().includes(searchTest.toLowerCase())) {
                 return item;
               }
-            }).map((item, key) => {
+            }).map((item: any, key: number) => {
               return (
                 // render môn học
                 <div className="" key={key}>
@@ -77,7 +95,7 @@ function Exam() {
                       hover:border-[#5fc9e9] hover:bg-cyan-100 font-inter
                       transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-200"
                     onMouseOver={() => {
-                      setIdxExam(key);
+                      setIdxExam(key);                      
                     }}
                   >
                     <div className='font-inter'>
@@ -113,7 +131,7 @@ function Exam() {
                       >
                         Bắt đầu
                       </button>
-                      
+
                     </div>
                   </div>
                 </div>

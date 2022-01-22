@@ -1,6 +1,5 @@
 import { useState } from "react"
 import "./index.css"
-import JSON from '../db.json'
 import { IconChoice, IconCorrect, IconWrong } from "../icon/IconsChoices"
 import { BsFillXSquareFill } from 'react-icons/bs';
 import { ExitMessage, SubmitMessage } from "./MessageModal";
@@ -9,23 +8,27 @@ import { BackgroundModal } from "./BackgroundModal";
 
 interface IModalTest {
     closeModal: React.Dispatch<React.SetStateAction<boolean>>;
-    idxExam: number
+    Exam: any
 }
 
-export const TestModal = ({ closeModal, idxExam }: IModalTest) => {
+export const TestModal = ({ closeModal, Exam }: IModalTest) => {
 
     const [score, setScore] = useState(0)
+
+    // State modal
     const [modalExitOpen, setModalExit] = useState(false)
     const [modalSubmitOpen, setModalSubmit] = useState(false)
 
+    // State answers from user
     const [answers, setAnswers] = useState([{
         question: '',
         choice: '',
         answer: ''
     }])
 
-    const jsonQuestions = JSON.test[idxExam]
-    const totalQuestion = jsonQuestions.questions.length
+    const jsonQuestions = Exam.questions
+    const totalQuestion = jsonQuestions.length
+
 
     // handle khi người dùng chọn đáp án
     const handleChoiceAnswer = (question: string, choice: string, answer: string) => {
@@ -58,17 +61,21 @@ export const TestModal = ({ closeModal, idxExam }: IModalTest) => {
                 return item
         })
 
+        // Câu hỏi chưa làm
         if (exist.length <= 0) {
             return <IconChoice />;
         }
         else {
+            // Phương án chọn đúng
             if (choice === exist[0].answer) {
                 return <IconCorrect />
             }
             else {
+                // Phương án không được chọn
                 if (choice !== exist[0].choice) {
                     return <IconChoice />
                 }
+                // Phương án chọn sai
                 else {
                     return <IconWrong />
                 }
@@ -98,12 +105,12 @@ export const TestModal = ({ closeModal, idxExam }: IModalTest) => {
                 </div>
 
                 <div className="row-span-1 block m-auto text-center text-3xl text-[#00C5FF] font-semibold">
-                    <h2>{jsonQuestions.subject}</h2>
+                    <h2>{Exam.name}</h2>
                 </div>
 
                 {/* Questions */}
                 <div className='row-span-3 grid px-6 mt-6 font-medium text-lg overflow-hidden overflow-y-scroll'>
-                    {jsonQuestions.questions.map((question, idx) => {
+                    {jsonQuestions.map((question: any, idx: number) => {
                         return (
                             <div className="my-2" key={idx}>
                                 <h3>Câu {idx + 1}. {question.question}</h3>
@@ -113,7 +120,7 @@ export const TestModal = ({ closeModal, idxExam }: IModalTest) => {
                                         return (
                                             <li className="flex text-center my-2 cursor-pointer" key={i}
                                                 onClick={() => {
-                                                    handleChoiceAnswer(idx.toString(), 'choice' + i.toString(), question.answer)
+                                                    handleChoiceAnswer(idx.toString(), 'choice' + i.toString(), question.answer )
                                                     if (question.answer === 'choice' + i.toString()) setScore(prev => prev + 1)
                                                 }}
                                             >
