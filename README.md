@@ -8,8 +8,8 @@
 * [Project structure](#project-structure)
 
 ## Project infomation
-SLST : Self-Learn Self-Taught
-SLST is a non-profit website where free materials are shared. Besides, you can also try your hand at selected and continously updated tests.
+ * SLST : Self-Learn Self-Taught
+ * SLST is a non-profit website where free materials are shared. Besides, you can also try your hand at selected and continously updated tests.
 
 ## FunDev - Team
 FunDev is a group of information technology students from HCMUS and CTU, the goal of developing a project to help the student community develop more. 
