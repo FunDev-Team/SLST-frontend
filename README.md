@@ -53,20 +53,20 @@ Before you start, ensure you meet the following requirements:
   | Admin | Providing admin rights to add or remove materials and tests |
     
   ### II. Program directory structure 
-   Present only the important files and need to know in the project:
-      1. public : Files about icons and images used in the website interface, images can be viewed on the website by the url of that image.
-      2. src :
-        - api : query to a set of functions in use. Contains api files to call to the server.
-          - acountsApi.tsx : collecting api calls to the admin
-          - docsAPI.tsx : get informations about materials
-          - examsApi.tsx : get API about tests and questions in every test.
-        - components : includes shared components such as Header, Footer...
-        - pages : contains the program's pages including: Home, About, Admin, Exam, TaiLieu
-          - About : About-page component which provide information of website like Project, Members, Users
-          - Admin : Admin-page component allow to access admin rights
-          - Home : Home-page component
-          - Exam : Exam-page component manage tests
-          - TaiLieu : TaiLieu-page component
+  Present only the important files and need to know in the project:
+    1. public : Files about icons and images used in the website interface, images can be viewed on the website by the url of that image.
+    2. src :
+      - api : query to a set of functions in use. Contains api files to call to the server.
+      - acountsApi.tsx : collecting api calls to the admin
+        - docsAPI.tsx : get informations about materials
+        - examsApi.tsx : get API about tests and questions in every test.
+      - components : includes shared components such as Header, Footer...
+      - pages : contains the program's pages including: Home, About, Admin, Exam, TaiLieu
+        - About : About-page component which provide information of website like Project, Members, Users
+        - Admin : Admin-page component allow to access admin rights
+        - Home : Home-page component
+        - Exam : Exam-page component manage tests
+        - TaiLieu : TaiLieu-page component
           
 ## Contact
   - HongTan: [Facebook](https://www.facebook.com/hongtan1422002/)
