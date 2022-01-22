@@ -17,28 +17,28 @@
 
 ## Prerequisites
 Before you start, ensure you meet the following requirements:
- - [x] You have intalled the Visual Studio Code or any other Javascript enabled enviroment.
- - [x] You also have to install NodeJS LTS and npm
- - [x] You have a basic understand of Typescript, Tailwind.
+  - [x] You have intalled the Visual Studio Code or any other Javascript enabled enviroment.
+  - [x] You also have to install NodeJS LTS and npm
+  - [x] You have a basic understand of Typescript, Tailwind.
 
 ## Guide:
 ### Cloning the project to your local
  - Open Git bash
  - Paste folllowing command:
-  - `$ git clone https://github.com/FunDev-Team/SLST-frontend.git`
+   ` $ git clone https://github.com/FunDev-Team/SLST-frontend.git `
   
 ### Running on local using npm
  #### Install
   At the terminal, paste the command:
-   - $ npm install
+   ` $ npm install `
  #### Usage
    After installing enviroment, using command to run:
-    - $ npm run
-    - Click url : http://localhost:3000 to run on local.
+    ` $ npm run `
+   Click url : http://localhost:3000 to run on local.
   
 ### Deloying on netlify by drag and drop
   - Step 1 : At the terminal, create file build:
-    - $ npm run build
+    ` $ npm run build `
   - Step 2 : Open netlify and log in netlify in browser
   - Step 3 : Drag and drop the newly created build file into the upload section on netlify to proceed with deloy project
 
