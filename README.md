@@ -12,10 +12,10 @@
  * SLST : Self-Learn Self-Taught
  * SLST is a non-profit website where free materials are shared. Besides, you can also try your hand at selected and continously updated tests.
 
-## FunDev - Team
+## :family_man_boy_boy: FunDev - Team
   FunDev is a group of information technology students from HCMUS and CTU, the goal of developing a project to help the student community develop more. 
 
-## Prerequisites
+## :old_key: Prerequisites
 Before you start, ensure you meet the following requirements:
   - [x] You have intalled the Visual Studio Code or any other Javascript enabled enviroment.
   - [x] You also have to install NodeJS LTS and npm
