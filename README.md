@@ -25,12 +25,14 @@ Before you start, ensure you meet the following requirements:
 ### Cloning the project to your local
   - Open Git bash
   - Paste folllowing command:
+```
     $ git clone https://github.com/FunDev-Team/SLST-frontend.git
+```
   
 ### Running on local using npm
  #### Install
   At the terminal, paste the command:
-   ` $ npm install `
+$ npm install
  #### Usage
    - After installing enviroment, using command to run:
     ` $ npm run `
