@@ -23,9 +23,9 @@ Before you start, ensure you meet the following requirements:
 
 ## Guide:
 ### Cloning the project to your local
- - Open Git bash
- - Paste folllowing command:
-    $ git clone https://github.com/FunDev-Team/SLST-frontend.git
+- Open Git bash
+- Paste folllowing command:
+  $ git clone https://github.com/FunDev-Team/SLST-frontend.git
   
 ### Running on local using npm
  #### Install
@@ -44,16 +44,16 @@ Before you start, ensure you meet the following requirements:
 
 ## Project structure
   ### I. Functions of the website
-    | Function name | Specific implemantation |
-    | ------------- | :-----------------------: |
-    | Home | Home page of website, performing blog posts |
-    | About | Information about the website design team and the message |
-    | Exam | Organizing mock tests on the website |
-    | TaiLieu | Organizing materials |
-    | Admin | Providing admin rights to add or remove materials and tests |
+  | Function name | Specific implemantation |
+  | ------------- | :-----------------------: |
+  | Home | Home page of website, performing blog posts |
+  | About | Information about the website design team and the message |
+  | Exam | Organizing mock tests on the website |
+  | TaiLieu | Organizing materials |
+  | Admin | Providing admin rights to add or remove materials and tests |
     
   ### II. Program directory structure 
-    Present only the important files and need to know in the project:
+   Present only the important files and need to know in the project:
       1. public : Files about icons and images used in the website interface, images can be viewed on the website by the url of that image.
       2. src :
         - api : query to a set of functions in use. Contains api files to call to the server.
