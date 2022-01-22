@@ -1,5 +1,7 @@
 # SLST - Nền tảng chia sẻ tài liệu và thi thử
-<img src="https://github.com/FunDev-Team/SLST-frontend/blob/main/public/logo.png">
+<p align="center">
+  <img src="https://github.com/FunDev-Team/SLST-frontend/blob/main/public/logo.png" width="350" title="hover text">
+</p>
 
 ## :office: Table of contents
 * [Project infomation](#project-infomation)
