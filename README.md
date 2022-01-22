@@ -6,6 +6,7 @@
 * [Prerequisites](#prerequisites)
 * [Guide](#guide)
 * [Project structure](#project-structure)
+* [Contact](#contact)
 
 ## Project infomation
  * SLST : Self-Learn Self-Taught
@@ -16,9 +17,9 @@ FunDev is a group of information technology students from HCMUS and CTU, the goa
 
 ## Prerequisites
 Before you start, ensure you meet the following requirements:
- [x] You have intalled the Visual Studio Code or any other Javascript enabled enviroment.
- [x] You also have to install NodeJS LTS and npm
- [x] You have a basic understand of Typescript, Tailwind.
+ - [x] You have intalled the Visual Studio Code or any other Javascript enabled enviroment.
+ - [x] You also have to install NodeJS LTS and npm
+ - [x] You have a basic understand of Typescript, Tailwind.
 
 ## Guide:
 ### Cloning the project to your local
