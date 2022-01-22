@@ -44,7 +44,7 @@ Before you start, ensure you meet the following requirements:
 ## Project structure
   ### I. Functions of the website
     | Function name | Specific implemantation |
-    | ------------- | ----------------------- |
+    | ------------- | :-----------------------: |
     | Home | Home page of website, performing blog posts |
     | About | Information about the website design team and the message |
     | Exam | Organizing mock tests on the website |
