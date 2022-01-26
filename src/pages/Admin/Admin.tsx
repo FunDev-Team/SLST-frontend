@@ -1,12 +1,10 @@
 /* eslint-disable react/jsx-no-duplicate-props */
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
-import IconAdmin from "./Icon/IconAdmin";
-import { FaHeart } from "react-icons/fa";
+import {IconAdmin} from "./icon/IconAdminPage";
 import Header from "../../components/Header";
-import ControlAdmin from "./ControlAdmin/ControlAdmin";
+import ControlAdmin from "./ControlAdmin/AdminControl";
 import accountApi from '../../api/accountsApi'
 
 
@@ -67,7 +65,7 @@ function Admin() {
           <img src="./logo.png" alt="" className="w-[7rem] " />
         </div>
 
-        <div className={"" + accessAdmin == "" ? "" : "hidden"}>
+        <div className={"" + accessAdmin === "" ? "" : "hidden"}>
           <h1 className="text-center mt-10 font-bold font-inter text-3xl text-[#12B0DF]">
             Nhập tài khoản để truy cập với quyền admin
           </h1>
@@ -89,7 +87,7 @@ function Admin() {
                 value={accountTerm}
                 onChange={(e) => {
                   setAccountTerm(e.target.value);
-                  if (failAccount == 1) setFailAccount(0);
+                  if (failAccount === 1) setFailAccount(0);
                 }}
                 onKeyDown={hadleKeyDown}
 
@@ -107,7 +105,7 @@ function Admin() {
             </h1>
           </div>
         </div>
-        <div className={"" + accessAdmin == "logged" ? "" : "hidden"}>
+        <div className={"" + accessAdmin === "logged" ? "" : "hidden"}>
           <div className="flex justify-center items-center">
             <button className=" my-5 p-2 font-inter bg-[#00C5FF] rounded-lg border-2 text-lg text-white    hover:border-cyan-800"
               onClick={() => {

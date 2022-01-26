@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import IconSearch from '../TaiLieu/Icon/IconSearch';
+import {IconSearch} from "../TaiLieu/icon/IconTaiLieuPage";
 import IconDOP from './icon/IconDOP';
 import IconExams from './icon/IconExams';
 import IconFields from './icon/IconFields';
@@ -80,7 +80,7 @@ function Exam() {
           {Object.keys(examList).length !== 0 && examList.data.exams
             .filter((item: any) => {
               // nếu searchTest "" thì tiến thanh return tất cả item
-              if (searchTest == "")
+              if (searchTest === "")
                 return item;
               // nếu subject có từ khóa vừa nhập thì sẽ được return và render ra
               else if (item.subject.toLowerCase().includes(searchTest.toLowerCase())) {

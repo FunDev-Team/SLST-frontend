@@ -16,12 +16,12 @@ function Home() {
         <div className="pt-32  col-span-2">
           <p className=" font-inter font-bold text-6xl text-[#12B0DF]">SLST</p>
           <p className="font-inter font-bold text-3xl max-w-xl mt-4">
-            Nền tảng chia sẻ tài liệu và làm bài thi dành cho sinh viên{" "}
+            Nền tảng chia sẻ tài liệu và làm bài thi dành cho sinh viên
           </p>
           <p className="mt-3 max-w-md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             eleifend sem rutrum elementum dictum. Aenean ultrices ante leo, ut
-            condimentum leo rhoncus id.{" "}
+            condimentum leo rhoncus id.
           </p>
           <Link to='/thiThu' className='flex m-auto mt-11'>
             <Button content='Get started' />

@@ -1,49 +1,59 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import docsApi from '../../../../api/docsApi';
-import {v4 as uuid} from 'uuid'
 
 function ModalCreateDoc({setModalCreateOpen}:any )  {
+        // handle day/month/year
+        const dateObj = new Date();
+        const month = dateObj.getUTCMonth() + 1; //months from 1-12
+        const day = dateObj.getUTCDate();
+        const year = dateObj.getUTCFullYear();
+        const newdate = day + "/" + month + "/" +year ;
+
         const [createDoc,setCreateDoc] = useState({
             subject: "",
             LinkDrive: "",
             teacher: "",
-            DOC: "21/01/2022",
+            DOC: newdate,
         });
-        const handleSubject=(e : any)=>{
-            const { name, value } = e.target;
-            setCreateDoc(prevState=>({
-                ...prevState,
-                subject: value
-            }))
-        }
-        const handleDocs=(e : any)=>{
-            const { name, value } = e.target;
-            setCreateDoc(prevState=>({
-                ...prevState,
-                LinkDrive: value
-            }))
-        }
-        const handleTeacher=(e:any)=>{
-            const { name, value } = e.target;
-            setCreateDoc(prevState=>({
-                ...prevState,
-                teacher: value
-            }))
-        }
+        // post infor document have just inputed 
         const postApiDocs=()=>{
             try {
                 docsApi.post(createDoc);
                 console.log("Post successfully");
                 setModalCreateOpen(false);
-               
-               
-                
 
             }catch(err)
             {
                 console.log("Post docs fail : ",err);
             }
         }
+
+        // handle while input subject
+        const handleSubject=(e : any)=>{
+            const { value } = e.target;
+            setCreateDoc(prevState=>({
+                ...prevState,
+                subject: value
+            }))
+        }
+        // handle while input docs
+        const handleDocs=(e : any)=>{
+            const {  value } = e.target;
+            setCreateDoc(prevState=>({
+                ...prevState,
+                LinkDrive: value
+            }))
+        }
+        // handle while input name teacher
+        const handleTeacher=(e:any)=>{
+            const { value } = e.target;
+            setCreateDoc(prevState=>({
+                ...prevState,
+                teacher: value
+            }))
+        }
+        
+       
     return (
         <div className=" flex justify-center items-center  inset-0 fixed z-10 bg-indigo-600 bg-opacity-25">
             <div className="h-[28rem] w-[30rem] bg-white rounded-lg relative shadow-2xl">

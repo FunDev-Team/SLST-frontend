@@ -1,9 +1,15 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import examsApi from '../../../../api/examsApi';
 
 function ModalCreateTest({ setModalCreateTest,adminCreate }: any) {
-
+    // handle day/month/year
+    const dateObj = new Date();
+    const month = dateObj.getUTCMonth() + 1; //months from 1-12
+    const day = dateObj.getUTCDate();
+    const year = dateObj.getUTCFullYear();
+    const newdate = day + "/" + month + "/" +year ;
+    
     const [numberOrder,setNumberOrder]=useState(2);
     const [inputFields, setInputFields] = useState
         ([{
@@ -23,7 +29,7 @@ function ModalCreateTest({ setModalCreateTest,adminCreate }: any) {
             subject: nameSubject,
             fields: nameField,
             poster: adminCreate,
-            DOP: "21/01/2022",
+            DOP: newdate,
             totalExams: inputFields.length,
             questions:inputFields,
         }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import docsApi from '../../../../api/docsApi';
 import examsApi from '../../../../api/examsApi';
@@ -17,11 +16,11 @@ function ModalDel({ setModalOpen,thingDelete, idDelete } : any) {
                     <div className="flex mt-8 justify-center items-center">
                         <button className="bg-[#1bff07] mr-2 px-6 py-2 text-white rounded-md" 
                         onClick={()=>{
-                            if(thingDelete==="tai lieu")
+                            if(thingDelete==="Tai Lieu")
                             {
                                 docsApi.delete(idDelete);
                                 setModalOpen(false);
-                            }else if(thingDelete==="bai thi")
+                            }else if(thingDelete==="Bai Thi")
                             {
                                 examsApi.delete(idDelete);
                                 setModalOpen(false);
@@ -32,8 +31,6 @@ function ModalDel({ setModalOpen,thingDelete, idDelete } : any) {
                             Hủy
                         </button>
                     </div>
-                    
-
                 </div>
             </div>
             

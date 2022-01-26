@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import LogoDoc from "./Logo/LogoDox";
-import LogoQuestion from "./Logo/LogoQuestion";
-import LogoUpdate from "./Logo/LogoUpdate"
-import LogoObject from './Logo/LogoObject'
+import {LogoDoc,LogoQuestion,LogoUpdate,LogoObject} from "./logo/IconHomePage";
 
 function WorkCan() {
+
   const [colors, setColor] = useState(0);
 
   return (
@@ -43,7 +41,7 @@ function WorkCan() {
             <div className={"" +
               (colors === 1 ? "bg-white rounded-[2.5rem] max-w-7xl px-6  py-9" : "bg-[#e9fafd] rounded-[2.5rem] px-6 py-9")+""}>
                 
-            <LogoDoc colors={colors == 1 ? "#12B0DF" : "#b5bcc6"} />
+            <LogoDoc colors={colors === 1 ? "#12B0DF" : "#b5bcc6"} />
             </div>
            
           </div>
@@ -70,7 +68,7 @@ function WorkCan() {
             <div className={"" +
               (colors === 2 ? "bg-white rounded-[2.5rem] max-w-7xl px-6  py-9" : "bg-[#e9fafd] rounded-[2.5rem] px-6 py-9")+""}>
                 
-            <LogoQuestion colors={colors == 2 ? "#12B0DF" : "#b5bcc6"} />
+            <LogoQuestion colors={colors === 2 ? "#12B0DF" : "#b5bcc6"} />
             </div>
            
           </div>
@@ -96,7 +94,7 @@ function WorkCan() {
             <div className={"" +
               (colors === 3 ? "bg-white rounded-[2.5rem] max-w-7xl px-6  py-9" : "bg-[#e9fafd] rounded-[2.5rem] px-6 py-9")+""}>
                 
-            <LogoUpdate colors={colors == 3 ? "#12B0DF" : "#b5bcc6"} />
+            <LogoUpdate colors={colors === 3 ? "#12B0DF" : "#b5bcc6"} />
             </div>
            
           </div>
@@ -123,7 +121,7 @@ function WorkCan() {
             <div className={"" +
               (colors === 4 ? "bg-white rounded-[2.5rem] max-w-7xl px-6  py-9" : "bg-[#e9fafd] rounded-[2.5rem] px-6 py-9")+""}>
                 
-            <LogoObject colors={colors == 4 ? "#12B0DF" : "#b5bcc6"} />
+            <LogoObject colors={colors === 4 ? "#12B0DF" : "#b5bcc6"} />
             </div>
            
           </div>
