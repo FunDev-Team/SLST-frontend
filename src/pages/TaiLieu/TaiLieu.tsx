@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
-import JSON from "./db.json";
 import IconSearch from "./Icon/IconSearch";
 import IconTeacher from "./Icon/IconTeacher";
 import IconDOC from "./Icon/IconDOC";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import axios from "axios";
 import docsApi from '../../api/docsApi'
 
 interface fill {
