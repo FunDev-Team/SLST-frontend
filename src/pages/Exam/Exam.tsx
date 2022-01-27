@@ -2,10 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import {IconSearch} from "../TaiLieu/icon/IconTaiLieuPage";
-import IconDOP from './icon/IconDOP';
-import IconExams from './icon/IconExams';
-import IconFields from './icon/IconFields';
-import IconPoster from './icon/IconPoster';
+import { IconDOP, IconExams, IconFields, IconPoster } from './icon/IconsExamPage'
 import { BackgroundModal } from './Modal/BackgroundModal';
 import { TestModal } from './Modal/TestModal';
 import examsApi from '../../api/examsApi';

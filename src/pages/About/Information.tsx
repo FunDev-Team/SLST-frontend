@@ -1,6 +1,4 @@
-import LogoDocument from "./Logo/LogoDocument";
-import LogoMember from "./Logo/LogoMember";
-import LogoUser from "./Logo/LogoUser";
+import { IconDocument, IconMember, IconUser } from './Icon/IconsAboutPage'
 
 function Infomation() {
   return (
@@ -51,7 +49,7 @@ function Infomation() {
           <div className="col-span-1 mx-auto text-center
           transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-110 duration-300">
             <div className="inline-block">
-              <LogoUser />
+              <IconUser />
             </div>
             <h3 className="my-8">+99</h3>
             <h3 className="text-[#12B0DF]">Users</h3>
@@ -60,7 +58,7 @@ function Infomation() {
           <div className="col-span-1 mx-auto text-center 
           transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-110 duration-300">
             <div className="inline-block">
-              <LogoDocument />
+              <IconDocument />
             </div>
             <h3 className="my-8">+10</h3>
             <h3 className="text-[#12B0DF]">Tài Liệu</h3>
@@ -69,7 +67,7 @@ function Infomation() {
           <div className="col-span-1 mx-auto text-center 
           transition ease-in-out delay-30 hover:-translate-y-1 hover:scale-110 duration-300">
             <div className="inline-block">
-              <LogoMember />
+              <IconMember />
             </div>
             <h3 className="my-8">3</h3>
             <h3 className="text-[#12B0DF]">Thành Viên</h3>
