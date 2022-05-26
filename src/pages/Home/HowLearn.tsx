@@ -1,4 +1,16 @@
-import React from "react";
+const ListHowLearn=(props:{order:number,content:string})=>
+{
+  return (
+      <div className="flex my-10">
+      <div className=" bg-[#12B0DF] w-11 h-11 rounded-full flex justify-center items-center text-white font-bold text-3xl  outline outline-4 outline-offset-4 outline-[#12B0DF]">
+        {props.order}
+      </div>
+      <h2 className="ml-6 mt-2 font-bold text-2xl">
+       {props.content}
+      </h2>
+    </div>
+  );
+}
 
 function HowLearn() {
   return (
@@ -8,35 +20,12 @@ function HowLearn() {
         <h1 className="text-[#12B0DF]  font-inter font-bold text-4xl pt-16 ">
           Học Như Thế Nào ?
         </h1>
-        <div className="flex my-10">
-          <div className=" bg-[#12B0DF] w-11 h-11 rounded-full flex justify-center items-center text-white font-bold text-3xl  outline outline-4 outline-offset-4 outline-[#12B0DF]">
-            1
-          </div>
-          <h2 className="ml-6 mt-2 font-bold text-2xl">
-            Xây dựng lộ trình học tập riêng biệt
-          </h2>
-        </div>
-        <div className="flex my-10">
-          <div className=" bg-[#12B0DF] w-11 h-11 rounded-full flex justify-center items-center text-white font-bold text-3xl  outline outline-4 outline-offset-4 outline-[#12B0DF]">
-            2
-          </div>
-          <h2 className="ml-6 mt-2 font-bold text-2xl">
-            Học bám xát tài liệu{" "}
-          </h2>
-        </div>
-        <div className="flex my-10">
-          <div className=" bg-[#12B0DF] w-11 h-11 rounded-full flex justify-center items-center text-white font-bold text-3xl  outline outline-4 outline-offset-4 outline-[#12B0DF]">
-            3
-          </div>
-          <h2 className="ml-6 mt-2 font-bold text-2xl">Ôn lại kiến thức</h2>
-        </div>
-        <div className="flex my-10">
-          <div className=" bg-[#12B0DF] w-11 h-11 rounded-full flex justify-center items-center text-white font-bold text-3xl  outline outline-4 outline-offset-4 outline-[#12B0DF]">
-            4
-          </div>
-          <h2 className="ml-6 mt-2 font-bold text-2xl">Kiểm tra quá trình</h2>
-        </div>
-      </div>
+
+          <ListHowLearn order={1} content={"Xây dựng lộ trình học tập riêng biệt"}/>
+          <ListHowLearn order={2} content={"Học bám xát tài liệu"}/>
+          <ListHowLearn order={3} content={"Ôn lại kiến thức"}/>
+          <ListHowLearn order={4} content={"Kiểm tra quá trình"}/>
+       </div>
     </div>
   );
 }
