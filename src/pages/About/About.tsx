@@ -8,12 +8,16 @@ function About() {
 
   return (
     // chỉnh sửa font-size và color 
-    <div className='font-inter'>
+    <div >
+      
       <Header />
-      <Introduce />
-      <Information />
-      <Members />
-      <Footer />
+      <div className="font-inter">
+        <Introduce />
+        <Information />
+        <Members />
+        <Footer />
+      </div>
+     
     </div>
   );
 }

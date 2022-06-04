@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
-import {IconSearch} from "../TaiLieu/icon/IconTaiLieuPage";
+import {IconSearch} from "../Document/icon/IconDocumentPage";
 import { IconDOP, IconExams, IconFields, IconPoster } from './icon/IconsExamPage'
 import { BackgroundModal } from './Modal/BackgroundModal';
 import { TestModal } from './Modal/TestModal';

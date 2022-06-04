@@ -23,7 +23,7 @@ function Blog() {
         <h1 className="font-inter text-[#12B0DF] font-bold text-2xl">
           Blog SLST
         </h1>
-        <a href="#"className="font-inter text-[#12B0DF] text-2xl hover:font-bold hover:underline">
+        <a href="#"className="font-inter text-[#12B0DF] text-2xnl hover:font-bold hover:underline">
           Xem tất cả Blog &#x2192;
         </a>
       </div>

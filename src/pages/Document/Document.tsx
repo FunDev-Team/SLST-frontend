@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import {IconDOC,IconSearch,IconTeacher} from "./icon/IconTaiLieuPage";
+import { useEffect, useState } from "react";
+import {IconSearch} from "./icon/IconDocumentPage";
+import { ItemDocument } from "../../components/ItemDocument";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import docsApi from '../../api/docsApi'
@@ -7,8 +8,6 @@ import docsApi from '../../api/docsApi'
 function TaiLieu() {
   // state khi nhập giá trị search
   const [searchTerm, setSearchTerm] = useState("");
-  // state khi over mouse môn học
-  const [underlineGet, setUnderlineGet] = useState(0);
   const [productList,setProductList]=useState([]);
 
   useEffect(()=>{
@@ -38,6 +37,7 @@ function TaiLieu() {
         </h2>
       </div>
       <div className=" flex justify-center items-center  mt-16 flex-col relative">
+        
         <div className="flex border-[#12B0DF] border-2  rounded-xl ">
           <div className="pt-2 border-solid px-3   bg-[#12B0DF] cursor-pointer rounded-tl-xl rounded-bl-xl -ml-[0.1rem] -my-[0.1rem]">
             <IconSearch />
@@ -51,61 +51,20 @@ function TaiLieu() {
             }}
           />
         </div>
+
         <div className="grid grid-cols-3 mt-16 gap-x-20 gap-y-10">
           {productList
             .filter((val) => {
               // nếu searchTerm " " thì tiến thanh return tất cả value
               if (searchTerm === "") return val;
-              else if (
-                String(val['subject'])
-                  .toLowerCase()
-                  .includes(searchTerm.toLowerCase())
-                ) 
+              else if ( String(val['subject']).toLowerCase().includes(searchTerm.toLowerCase())) 
               {
-                // nếu subject có từ khóa vừa nhập thì sẽ được return và render ra
                 return val;
               }})
             .map((val, key) => {
-              return (
-                // render môn học
+              return ( // render môn học
                 <div className="" key={key}>
-                  <div
-                    className="border-[3px] rounded-md border-[#7ce0ff] w-72 h-44 hover:border-[#5fc9e9] hover:border-4 font-inter"
-                    onMouseOver={() => {
-                      setUnderlineGet(val['_id']);
-                    }}
-                    onMouseOut={() => {
-                      setUnderlineGet(0);
-                    }}
-                  >
-                    <a
-                      href={val['LinkDrive']}
-                      target="_blank"
-                      className="" rel="noreferrer"
-                    >
-                      <div className="text-center mt-5 font-inter font-bold">
-                        {val['subject']}
-                      </div>
-                      <div className="flex mt-8 ml-4">
-                       <IconDOC />
-                        <h1 className="ml-3 font-inter">{val['teacher']}</h1>
-                      </div>
-                      <div className="flex mt-4  ml-4">
-                      <IconTeacher />
-                        <h1 className="ml-3 font-inter">{val['DOC']}</h1>
-                      </div>
-                      <h1
-                        className={
-                          "text-right font-inter  " +
-                          (underlineGet === val['_id']
-                            ? "text-[#12B0DF] underline"
-                            : "")
-                        }
-                      >
-                        Lấy tài liệu &rarr;{" "}
-                      </h1>
-                    </a>
-                  </div>
+                  <ItemDocument  LinkDrive={val['LinkDrive']} subject= {val['subject']} teacher={val['teacher']} DOC={val['DOC']}  />
                 </div>
               );
             })}

@@ -10,7 +10,7 @@ import accountApi from '../../api/accountsApi'
 
 function Admin() {
   const [accountTerm, setAccountTerm] = useState(""); // state account đang nhâp
-  const [failAccount, setFailAccount] = useState(0); // 0 : là chưa nhập hoặc chưa click đăng nhập, 1 là sai mật khẩu
+  const [failAccount, setFailAccount] = useState(false); // 0 : là chưa nhập hoặc chưa click đăng nhập, 1 là sai mật khẩu
   const [accessAdmin, setAccessAdmin] = useState("");
   // handle xac nhận tài khoản khi log in -> return 1 nếu login fail, else login thành công
   const [accountList,setAccountList] = useState([]);
@@ -38,7 +38,7 @@ function Admin() {
   }
   // xử lí sau khi login, nếu log in fail, tiến hành set state, ngược lại thông báo log in thành công
   const handleLogIn = () => {
-     (logInFail(accountTerm) === 1? setFailAccount(1):setAccessAdmin("logged")) 
+     (logInFail(accountTerm) === 1? setFailAccount(true):setAccessAdmin("logged")) 
   };
 
   // xử lí khi nhấn enter ở khung input tài khoản admin
@@ -72,47 +72,40 @@ function Admin() {
           <h2 className="text-center text-[#5E6475] mt-2">
             Quyền thêm/xóa tài liệu, đề thi
           </h2>
-          <h1 className={"text-center mt-9 -mb-11 font-semibold " + (failAccount === 1 ? "text-[#eb5757]" : "invisible")}>
+          <h1 className={"text-center mt-9 -mb-11 font-semibold " + (failAccount === true ? "text-[#eb5757]" : "invisible")}>
             ! Tài khoản admin vừa nhập không chính xác
           </h1>
 
           <div className="relative flex justify-center items-center mt-14">
-            <div
-              className="flex border-[2px]  rounded-xl border-[#12B0DF]" >
-              <input
-                id="input-account"
-                type="text"
-                placeholder=""
-                className="border-none  rounded-md  w-[25rem] h-10 outline-none ml-2"
+            <div className="flex border-[2px]  rounded-xl border-[#12B0DF]" >
+              <input id="input-account" type="text" placeholder="" className="border-none  rounded-md  w-[25rem] h-10 outline-none ml-2"
                 value={accountTerm}
                 onChange={(e) => {
                   setAccountTerm(e.target.value);
-                  if (failAccount === 1) setFailAccount(0);
+                  if (failAccount === true) setFailAccount(false);
                 }}
-                onKeyDown={hadleKeyDown}
-
-              />
+                onKeyDown={hadleKeyDown} 
+                />
               <div className="mt-1 mr-1 cursor-pointer">
                 <IconAdmin />
               </div>
             </div>
           </div>
+
           <div className="flex justify-center items-center  ">
-            <h1
-              className="mt-6 font-inter font-bold  cursor-pointer bg-[#12B0DF] text-center py-1 w-[28rem]  rounded-md text-white "
+            <h1 className="mt-6 font-inter font-bold  cursor-pointer bg-[#12B0DF] text-center py-1 w-[28rem]  rounded-md text-white "
               onClick={() => { handleLogIn(); }}>
               Truy cập admin
             </h1>
           </div>
         </div>
+
         <div className={"" + accessAdmin === "logged" ? "" : "hidden"}>
           <div className="flex justify-center items-center">
             <button className=" my-5 p-2 font-inter bg-[#00C5FF] rounded-lg border-2 text-lg text-white    hover:border-cyan-800"
-              onClick={() => {
-                setAccessAdmin("");
-                setAccountTerm("");
-              }}>
-              Đăng xuất</button>
+              onClick={() => { setAccessAdmin(""); setAccountTerm(""); }}>
+              Đăng xuất
+            </button>
           </div>
 
           <ControlAdmin nameAdmin={accountTerm} />

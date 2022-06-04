@@ -28,7 +28,7 @@ function Header() {
           </Link>
         </li>
 
-        <li className="mt-[1.9em] flex-1  flex justify-around items-center  ">
+        <li className=" flex-1  flex justify-around items-center  ">
           <div className="">
             <Link to="/" className={ "heading" + (path == "/" ? " heading_hover" : "") } onClick={() => setPath("/")} >
               Trang Chủ
