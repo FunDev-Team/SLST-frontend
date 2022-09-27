@@ -2,9 +2,9 @@ import { Link } from "react-router-dom"
 import WorkCanDone from "./WorkCan"
 import HowLearn from "./HowLearn";
 import Blog from "./Blog";
-import { Button } from "../../components/Button";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import { Button } from "../../components/Button";
 
 function Home() {
   return (
@@ -31,18 +31,14 @@ function Home() {
           className="pt-6 col-span-4 max-h-[31.8rem]"
         />
       </div>
-
       <img alt="Layout" src="./Layout.png" className="" />
-
       <WorkCanDone />
-
       <div className="mt-56">
         <HowLearn />
       </div>
       <div className="my-56 mx-12">
         <Blog />
       </div>
-      
       <Footer />
     </>
   );

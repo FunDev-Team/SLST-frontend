@@ -42,13 +42,13 @@ function Header() {
           </div>
 
           <div className="">
-            <Link to="/thiThu" className={ "heading" + (path == "/thiThu" ? " heading_hover" : "") } onClick={() => setPath("/thiThu")} >
+            <Link to="/test" className={ "heading" + (path == "/test" ? " heading_hover" : "") } onClick={() => setPath("/test")} >
               Thi Thử
             </Link>
           </div>
 
           <div className="">
-            <Link to="/taiLieu" className={ "heading" + (path == "/taiLieu" ? " heading_hover" : "") } onClick={() => setPath("/taiLieu")} >
+            <Link to="/document" className={ "heading" + (path == "/document" ? " heading_hover" : "") } onClick={() => setPath("/document")} >
               Tài Liệu
             </Link>
           </div>

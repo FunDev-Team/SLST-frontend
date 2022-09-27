@@ -4,11 +4,9 @@ import { MdCopyright } from 'react-icons/md';
 import { Button } from './Button';
 
 function Footer() {
-
     return (
         <div className='relative w-full bottom-0 mt-96'>
             <div className='flex justify-around bg-cyan-50 h-80 w-full pt-24'>
-
                 <div className='text-slate-600'>
                     <Link to='/' className='block'>
                         <Logo />
