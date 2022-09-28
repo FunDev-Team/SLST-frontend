@@ -18,7 +18,7 @@ function Members() {
         <div className="col-span-1 max-w-xs text-center mx-auto">
           <div className="relative">
             <img
-              src="./imgAbout/HongTan.jpg"
+              src={require("../../assets/images/personal/HongTan.png")}
               alt="HongTan"
               className="max-w-xs rounded-3xl opacity-90  w-80 h-[350px]
                             hover:border-4 hover:border-cyan-400 hover:opacity-100"
@@ -76,7 +76,7 @@ function Members() {
         <div className="col-span-1 max-w-xs text-center mx-auto">
           <div className="relative">
             <img
-              src="./imgAbout/HuuLoc.jpg"
+              src={require("../../assets/images/personal/HuuLoc.png")}
               alt="HuuLoc"
               className="max-w-xs rounded-3xl opacity-90  w-80 h-[350px]
                             hover:border-4 hover:border-cyan-400 hover:opacity-100"
@@ -136,7 +136,7 @@ function Members() {
         <div className="col-span-1 max-w-xs text-center mx-auto">
           <div className="relative">
             <img
-              src="./imgAbout/DuyKhuong.jpg"
+              src={require("../../assets/images/personal/DuyKhuong.png")}
               alt="DuyKhuong"
               className="max-w-xs rounded-3xl opacity-90 w-80 h-[350px]
                             hover:border-4 hover:border-cyan-400 hover:opacity-100"

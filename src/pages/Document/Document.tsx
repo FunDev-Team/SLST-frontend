@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IconSearch } from "./icon/IconDocumentPage";
+import { IconSearch } from "../../assets/icon/IconDocumentPage";
 import { ItemDocument } from "../../components/ItemDocument";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -17,7 +17,7 @@ const LoadingComponent = () => {
 function TaiLieu() {
   // state khi nhập giá trị search
   const [searchTerm, setSearchTerm] = useState("");
-  const [productList, setProductList] = useState([]);
+  const [productList, setProductList] = useState<[] | null>(null)
 
   useEffect(() => {
     const fetchDocs = async () => {
@@ -61,7 +61,7 @@ function TaiLieu() {
           </div>
 
           <div className="grid grid-cols-3 mt-16 gap-x-20 gap-y-10">
-            {productList.filter((val) => {
+            { productList.filter((val) => {
                 if (  searchTerm === "" || String(val["subject"]).toLowerCase().includes(searchTerm.toLowerCase()) ) {
                   return val;
                 }

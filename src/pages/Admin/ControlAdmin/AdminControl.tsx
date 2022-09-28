@@ -7,7 +7,7 @@ import {
   IconAdminOther,
   IconRefresh,
   IconTrash,
-} from "../icon/IconAdminPage";
+} from "../../../assets/icon/IconAdminPage";
 import ModalDel from "./Modal/ModalDel";
 import ModalCreateDoc from "./Modal/ModalCreateDoc";
 import ModalCreateTest from "./Modal/ModalCreateTest";

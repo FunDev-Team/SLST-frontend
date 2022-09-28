@@ -24,15 +24,15 @@ function HowLearn() {
   ];
   return (
     <div className="grid grid-cols-2">
-      <img src="./HowLearn.png" alt="" className="" />
-      <div className="bg-how-learn bg-contain pl-16 ">
+      <img src={require("../../assets/images/imageLearn.png")} alt="image-learn" />
+      <div className="bg-slate-200 bg-contain pl-16 ">
         <h1 className="text-[#12B0DF]  font-inter font-bold text-4xl pt-16 ">
           Học Như Thế Nào ?
         </h1>
         {
           LISTHOWLEARN && LISTHOWLEARN.map((value, index) => {
               return <ListHowLearn order={index + 1} content={value.content} />;
-            })
+            })        
         }
       </div>
     </div>

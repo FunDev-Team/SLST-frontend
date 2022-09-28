@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "./index.css"
-import { IconChoice, IconCorrect, IconWrong } from "../icon/IconsChoices"
+import { IconChoice, IconCorrect, IconWrong } from "../../../assets/icon/IconsChoices"
 import { BsFillXSquareFill } from 'react-icons/bs';
 import { ExitMessage, SubmitMessage } from "./MessageModal";
 import { BackgroundModal } from "./BackgroundModal";

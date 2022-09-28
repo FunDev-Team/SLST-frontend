@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {IconDOC,IconTeacher} from "../pages/Document/icon/IconDocumentPage";
+import {IconDOC,IconTeacher} from "../assets/icon/IconDocumentPage";
 
 export function ItemDocument(props:{LinkDrive:string,subject:string,teacher:string,DOC:string }) {
     const [onMouse,setOnMouse]=useState(false);

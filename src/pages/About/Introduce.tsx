@@ -20,10 +20,10 @@ function Introduce() {
           </Link>
         </div>
 
-        <img src="./imgAbout/bg_intro.jpg" className="px-28 py-6 col-span-1" />
+        <img src={require("../../assets/images/thumbnailAbout.png")} className="px-28 py-6 col-span-1" />
       </div>
 
-      <img src="./imgAbout/bgBot.jpg" className="block w-full" />
+      <img src={require("../../assets/images/backgroundBottom.png")} className="block w-full" />
     </div>
   );
 }

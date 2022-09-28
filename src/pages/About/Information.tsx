@@ -1,4 +1,4 @@
-import { IconDocument, IconMember, IconUser } from './Icon/IconsAboutPage'
+import { IconDocument, IconMember, IconUser } from '../../assets/icon/IconsAboutPage'
 
 function Infomation() {
   return (

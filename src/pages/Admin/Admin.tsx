@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Footer from "../../components/Footer";
-import { IconAdmin } from "./icon/IconAdminPage";
+import { IconAdmin } from "../../assets/icon/IconAdminPage";
 import Header from "../../components/Header";
 import ControlAdmin from "./ControlAdmin/AdminControl";
 import accountApi from "../../api/accountsApi";

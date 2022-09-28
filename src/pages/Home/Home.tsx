@@ -27,11 +27,11 @@ function Home() {
         </div>
         <img
           alt="Thumbnail"
-          src="./thumbnailAdmin.png"
+          src={require("../../assets/images/thumbnailAdmin.png")} 
           className="pt-6 col-span-4 max-h-[31.8rem]"
         />
       </div>
-      <img alt="Layout" src="./Layout.png" className="" />
+      <img alt="Layout" src={require("../../assets/images/backgroundBottom.png")} className="" />
       <WorkCanDone />
       <div className="mt-56">
         <HowLearn />

@@ -2,7 +2,7 @@ import axios from "axios";
 import queryString from "query-string";
 
 const axiosClient = axios.create({
-  baseURL: "https://slst-backend.herokuapp.com/api",
+  baseURL: process.env.REACT_APP_API,
   headers: {
     "content-type": "application/json",
   },

@@ -2,7 +2,7 @@ export function Loading() {
   return (
     <div role="status">
       <svg
-        className="inline  w-28 h-28 text-gray-200 animate-spin dark:text-gray-600 fill-sky-400"
+        className="inline  w-28 h-28  animate-spin dark:text-gray-300 fill-sky-400"
         viewBox="0 0 100 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

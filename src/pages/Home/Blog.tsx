@@ -20,19 +20,19 @@ function Blog() {
 
   const LISTBLOG = [
     {
-      srcImg: "./Blog/BlogAlgorithm.png",
+      srcImg: require("../../assets/images/blog/BlogAlgorithm.png"),
       topic: "Thuật Toán",
       tittle: "Tầm Quan Trọng Thuật Toán",
       desc: "Quá trình học thuật toán từ cấp ba đến đại học ? "
     },
     {
-      srcImg: "./Blog/BlogWeb.png",
+      srcImg: require("../../assets/images/blog/BlogWeb.png"),
       topic: "Website",
       tittle: "Làm Dự Án Website Ra Sao ?",
       desc: "Tự học thiết kế website từ năm nhất như thế nào thì hiệu quả"
     },
     {
-      srcImg: "./Blog/BlogMath.png",
+      srcImg: require("../../assets/images/blog/BlogMath.png"),
       topic: "Toán Học",
       tittle: " Môn Toán Đại Cương Có Gì ?",
       desc: "Môn toán giúp ích như thế nào khi theo học ngành công nghệ thông tin ?"
